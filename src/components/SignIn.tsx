@@ -142,7 +142,7 @@ const SignIn: FC = () => {
             url: redirect.url,
           }));
       if (result && result.resource) {
-        window.location.href = result.resource;
+        // window.location.href = result.resource;
       }
       setSuccessView(true);
     }

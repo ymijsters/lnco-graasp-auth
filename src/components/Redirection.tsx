@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
 
-import { getUrlForRedirection, redirectToSavedUrl } from '@graasp/sdk';
+import { getUrlForRedirection } from '@graasp/sdk';
 import { RedirectionContent } from '@graasp/ui';
 
-import { GRAASP_BUILDER_HOST } from '../config/env';
+// import { GRAASP_BUILDER_HOST } from '../config/env';
 import { hooks } from '../config/queryClient';
 import { useRedirection } from '../hooks/searchParams';
 
@@ -16,8 +16,7 @@ const Redirection: FC<Props> = ({ children }) => {
   const redirect = useRedirection();
 
   if (member) {
-    redirectToSavedUrl(window, GRAASP_BUILDER_HOST);
-
+    // redirectToSavedUrl(window, GRAASP_BUILDER_HOST, { openInNewTab: true });
     return (
       <RedirectionContent link={redirect.url ?? getUrlForRedirection() ?? ''} />
     );
