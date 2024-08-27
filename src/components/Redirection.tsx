@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
 
-import { getUrlForRedirection } from '@graasp/sdk';
+import { getUrlForRedirection, redirectToSavedUrl } from '@graasp/sdk';
 import { RedirectionContent } from '@graasp/ui';
 
-// import { GRAASP_BUILDER_HOST } from '../config/env';
+import { GRAASP_BUILDER_HOST } from '../config/env';
 import { hooks } from '../config/queryClient';
 import { useRedirection } from '../hooks/searchParams';
 
